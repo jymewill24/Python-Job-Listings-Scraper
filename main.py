@@ -19,14 +19,13 @@ print(html_content)  # Print the HTML content to verify it was fetched correctly
 # Parse the HTML
 soup = BeautifulSoup(html_content, 'html.parser')
 
-# Find all job listing containers (you'll need to adjust the tag/class based on the actual website)
+# Find all job listing containers
 job_cards = soup.find_all('div', class_='card')
 
 jobs_data = []
 
 for card in job_cards:
-    # Extract specific text. Use .strip() to clean up whitespace.
-    # Use .text to get the inner text, or .get('href') to get link attributes.
+    # Use .text to get the inner text and 'href' to get link attributes.
 
     title = card.find('h2', class_='title is-5').text.strip() or "N/A"
     company = card.find('h3', class_='subtitle is-6 company').text.strip() or "N/A"
