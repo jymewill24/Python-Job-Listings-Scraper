@@ -1,6 +1,8 @@
 # Python-Job-Listings-Scraper
 A Python web scraper that collects job listings from the Fake Python Jobs website. The scraper will extract information such as the job title, company name, location, and a link to the full job description.
 
+This project was built as part of the [roadmap.sh Job Listings Scraper Project](https://roadmap.sh/projects/job-listings-scraper).
+
 ## Features
 - Fetches HTML content using the `requests` library.
 - Parses job titles, company names, locations, and application links using `BeautifulSoup4`.
